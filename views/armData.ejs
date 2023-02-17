@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs", {title: "ME-ARM", showNav:false}) %>
+<%if (arms.length > 0) {%>
+    <%arms.forEach((arm)=>{%>
+        <div>
+            <div>Arm ID : <%=arm.armId%></div>
+            <div>Last Seen : <%=arm.lastSeen%></div>
+            <div>Base Angle : <%=arm.baseAngle%></div>
+            <div>Extender Angle : <%=arm.extenderAngle%></div>
+            <div>Lift Angle : <%=arm.liftAngle%></div>
+            <div>Claw Angle : <%=arm.clawAngle%></div>
+        </div>
+    <%});%>
+<%}%>
+<%- include("partials/footer.ejs") %>

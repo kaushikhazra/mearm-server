@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+<title>Bogging <%=title%></title>
+</head>
+<body>
+    <% if (showNav) { %>
+    <nav class="navbar ">
+        <span class="navbar-brand navbar-brand-white mb-0 h1">
+            Welcome <%=global.user.userName%> - 
+            <small class="text-muted"> <%=title%></small>
+        </span>
+        
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="btn btn-purple" href="/user/signout">Sign Out</a>
+                <% if (showSettings) { %>
+                <a class="btn btn-purple " href="settings">Settings</a>
+                <% } %>
+            </li>
+        </ul>
+    </nav>
+    <%}%>
+
